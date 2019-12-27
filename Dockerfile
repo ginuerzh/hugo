@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.10
 
 # Configuration variables
 ENV HUGO_VERSION 0.40.1
@@ -11,5 +11,7 @@ RUN wget -qO /tmp/hugo.tar.gz \
 
 VOLUME /site
 WORKDIR /site
+
+EXPOSE  1313
 
 ENTRYPOINT ["hugo"]
