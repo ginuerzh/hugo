@@ -1,7 +1,7 @@
 FROM alpine
 
 # Configuration variables
-ENV HUGO_VERSION 0.101.0
+ENV HUGO_VERSION 0.121.1
 ENV HUGO_BINARY hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 RUN wget -qO /tmp/hugo.tar.gz \
