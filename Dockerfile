@@ -1,4 +1,4 @@
-FROM alpine
+FROM golang:1.21-alpine
 
 # Configuration variables
 ENV HUGO_VERSION 0.121.1
@@ -12,7 +12,7 @@ RUN wget -qO /tmp/hugo.tar.gz \
 # libc6-compat & libstdc++ are required for extended SASS libraries
 # ca-certificates are required to fetch outside resources (like Twitter oEmbeds)
 RUN apk update && \
-    apk add --no-cache ca-certificates libc6-compat libstdc++
+    apk add --no-cache ca-certificates libc6-compat libstdc++ git
 
 VOLUME /site
 WORKDIR /site
